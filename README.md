@@ -5,7 +5,7 @@ Power it up, connect to ESP WiFi network(password is `password`), [open its pane
 
 The `WifiAccessPoint` and `SerialBlink` sketches are loaded on the [ESP](https://github.com/esp8266/arduino) and Arduino, respectively.
 
-Badly drawn schematic:
+Badly drawn schematic (oops, flip the RX and TX actually):
 
 ![Schematic](schematic.png)
 

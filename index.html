@@ -1,0 +1,35 @@
+<!-- This gets minified in WiFiAccessPoint.ino -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <title>Test</title>
+        <style>
+            button, input, h2 {
+                display: block;
+                font-family: sans-serif;
+                width: 100%;
+                font-size: 4em;
+            }
+            button {
+              padding-top: 0.5em;
+              padding-bottom: 0.5em;
+            }
+            h2 {
+              text-align: center;
+              margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+      <button id="1" onclick="r(this.id)">On</button>
+      <button id="0" onclick="r(this.id)">Off</button>
+      <h2>Switch</h2><input name="label" type="range" min="0" max="1" onchange="r(this.value)">
+      <input type="number" min="1" max="10" onchange="r(this.value)">
+        <script>
+            async function r(a) {
+              fetch("http://192.168.1.56/?input=" + a);
+            }
+        </script>
+    </body>
+</html>
